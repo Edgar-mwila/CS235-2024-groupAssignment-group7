@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine</title>
+    <link rel="stylesheet" href="medicine.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Noto+Sans:wght@100;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="logo.jpg" alt="logo"></a>
+        <nav class="headbar">
+            <a href="index.html">Home</a>
+            <a href="doctor.html">Doctor</a>
+            <a href="medicine.html">Medicine</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="Type Something...">
+            <label for="search-box" class="fa fa-search"></label>   
+        </form>
+        <div class="options">
+            <i class="fa fa-shopping-cart" id="cart-btn" style="font-size:30px; cursor: pointer;"></i>
+        </div>
+    </header>
+
+    <section class="bottom" id="bottom">
+        <div class="container">
+            <h1 class="heading">MEDICINE</h1><hr>
+        </div>
+        <div class="box-container" id="medicine-products"></div>
+    </section>
+
+    <!-- Modals -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modal-title"></h1>
+            <img id="modal-image" src="./image-20240611T034251Z-001/image/m9.png" alt="">
+            <p id="modal-description"></p>
+            <span id="modal-price"></span>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Shopping Cart</h1>
+            <div id="cart-items"></div>
+            <button id="buy-btn">Buy Items</button>
+        </div>
+        
+    </div>
+
+    <script src="main.js"></script>
+    <style>
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    </style>
+</body>
+</html>
